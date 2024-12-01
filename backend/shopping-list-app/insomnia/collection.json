@@ -1,0 +1,94 @@
+{
+    "name": "Shopping List API",
+    "requests": [
+      {
+        "name": "Login",
+        "method": "POST",
+        "url": "http://localhost:3000/login",
+        "body": {
+          "mode": "json",
+          "json": {
+            "email": "ivan@example.com",
+            "password": "yourpassword"
+          }
+        },
+        "headers": [],
+        "authentication": {
+          "type": "bearer",
+          "bearerToken": "{{bearer_token}}"
+        }
+      },
+      {
+        "name": "Create Shopping List",
+        "method": "POST",
+        "url": "http://localhost:3000/shopping-list/create",
+        "body": {
+          "mode": "json",
+          "json": {
+            "name": "Weekly Groceries",
+            "members": ["123457"],
+            "items": []
+          }
+        },
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{bearer_token}}"
+          }
+        ]
+      },
+      {
+        "name": "Get Shopping List by ID",
+        "method": "GET",
+        "url": "http://localhost:3000/shopping-list/get/7890",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{bearer_token}}"
+          }
+        ]
+      },
+      {
+        "name": "Get All Shopping Lists",
+        "method": "GET",
+        "url": "http://localhost:3000/shopping-list/list",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{bearer_token}}"
+          }
+        ]
+      },
+      {
+        "name": "Delete Shopping List",
+        "method": "DELETE",
+        "url": "http://localhost:3000/shopping-list/delete/7890",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{bearer_token}}"
+          }
+        ]
+      },
+      {
+        "name": "Update Shopping List",
+        "method": "PUT",
+        "url": "http://localhost:3000/shopping-list/update/7890",
+        "body": {
+          "mode": "json",
+          "json": {
+            "name": "Updated Groceries",
+            "members": ["123457"],
+            "items": []
+          }
+        },
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Bearer {{bearer_token}}"
+          }
+        ]
+      }
+    ]
+  }
+  

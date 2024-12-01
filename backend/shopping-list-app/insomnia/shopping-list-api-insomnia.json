@@ -1,0 +1,174 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-12-01T16:29:40.251Z",
+    "__export_source": "insomnia.desktop.app:v8.4.5",
+    "resources": [
+      {
+        "_id": "req_0fc2f7fc612945468ed2876056f0fbc6",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733070209198,
+        "created": 1733069610622,
+        "url": "http://localhost:3000/login",
+        "name": "Login",
+        "method": "POST",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"email\": \"alice@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "parameters": [],
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "parentId": null,
+        "modified": 1733067564806,
+        "created": 1733067564806,
+        "name": "Shopping List Endpoints",
+        "scope": "collection",
+        "_type": "workspace"
+      },
+      {
+        "_id": "req_9714d3643e7b40bdbd482ab6a209225d",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733069442202,
+        "created": 1733067974062,
+        "url": "http://localhost:3000/item/update/:itemId",
+        "name": "Update item",
+        "method": "PUT",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"name\": \"Tesco update\",\n  \"members\": [\"123457\"]\n}"
+        },
+        "parameters": [],
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_d7308db0d97c45a283e26981fc73fbca",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733069440035,
+        "created": 1733067955314,
+        "url": "http://localhost:3000/item/delete/:123123",
+        "name": "Delete item",
+        "method": "DELETE",
+        "body": {},
+        "parameters": [],
+        "headers": [
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_3c14de2c32d24737940e25bc6b3974bf",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733069438219,
+        "created": 1733067935387,
+        "url": "http://localhost:3000/item/add",
+        "name": "Item add",
+        "method": "POST",
+        "body": {},
+        "parameters": [],
+        "headers": [
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_9a24b616fd484084a8f6cdeb74d4cab2",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733069435721,
+        "created": 1733067888578,
+        "url": "http://localhost:3000/shopping-list/update/:listId",
+        "name": "Update shopping list",
+        "method": "PUT",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"name\": \"Tesco update\",\n  \"members\": [\"123457\"]\n}"
+        },
+        "parameters": [],
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_7ebd4656a6d9474dbb1374180196b4f7",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733070252150,
+        "created": 1733067831979,
+        "url": "http://localhost:3000/shopping-list/list",
+        "name": "Shopping list",
+        "method": "GET",
+        "body": {},
+        "parameters": [],
+        "headers": [
+          { "name": "User-Agent", "value": "insomnia/8.4.5" },
+          {
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTciLCJyb2xlIjoibWVtYmVyIiwiaWF0IjoxNzMzMDcwMjEwLCJleHAiOjE3MzMwNzM4MTB9.MZOj6iJnvXbn2Qx9cTfVzuGTaaZYij9JZwdz9sdvK4w"
+          }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_305ab343000d44c2ab893f00b6011aaf",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733069430062,
+        "created": 1733067776798,
+        "url": "http://localhost:3000/shopping-list/delete/7890",
+        "name": "Delete shopping list",
+        "method": "DELETE",
+        "body": {
+          "mimeType": "application/json",
+          "text": ""
+        },
+        "parameters": [],
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "User-Agent", "value": "insomnia/8.4.5" }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "req_21a0f900ef28420499b8a266a21428b1",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733070220905,
+        "created": 1733067576579,
+        "url": "http://localhost:3000/shopping-list/create",
+        "name": "Create Shopping List",
+        "method": "POST",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"name\": \"Tesco\",\n  \"ownerId\": \"123456\",\n  \"members\": [\"123457\", \"123458\"]\n}"
+        },
+        "parameters": [],
+        "headers": [
+          { "name": "Content-Type", "value": "application/json" },
+          { "name": "User-Agent", "value": "insomnia/8.4.5" },
+          {
+            "name": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTciLCJyb2xlIjoibWVtYmVyIiwiaWF0IjoxNzMzMDcwMjEwLCJleHAiOjE3MzMwNzM4MTB9.MZOj6iJnvXbn2Qx9cTfVzuGTaaZYij9JZwdz9sdvK4w"
+          }
+        ],
+        "_type": "request"
+      },
+      {
+        "_id": "env_6a806434c8d9934192be0d9c05a593600a34c1ad",
+        "parentId": "wrk_8e121ad9dd454cd1bee7bc89b5c008b3",
+        "modified": 1733067564807,
+        "created": 1733067564807,
+        "name": "Environment Variables",
+        "_type": "environment"
+      }
+    ]
+  }
+  
