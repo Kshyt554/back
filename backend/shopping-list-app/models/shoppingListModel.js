@@ -15,17 +15,17 @@ class ShoppingList {
   }
 
   static getById(id) {
-    return shoppingLists.find((list) => list.listId === id);  // Используем listId
+    return shoppingLists.find((list) => list.listId === id); 
   }
 
   static create({ name, ownerId }) {
-    const newList = { listId: `${Date.now()}`, name, ownerId, items: [] };  // Используем listId
+    const newList = { listId: `${Date.now()}`, name, ownerId, items: [] };
     shoppingLists.push(newList);
     return newList;
   }
 
   static delete(id) {
-    const index = shoppingLists.findIndex((list) => list.listId === id);  // Используем listId
+    const index = shoppingLists.findIndex((list) => list.listId === id); 
     if (index === -1) return false;
     shoppingLists.splice(index, 1);
     return true;

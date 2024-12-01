@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const authorize = require('../middleware/authorize'); // Импортируем middleware
-const shoppingListController = require('../controllers/shoppingListController'); // Импортируем контроллеры
+const authorize = require('../middleware/authorize');
+const shoppingListController = require('../controllers/shoppingListController');
 
-// Роуты для работы с shopping-list
-router.get('/list', authorize('owner'), shoppingListController.getShoppingLists); // Получить все списки покупок
-router.post('/create', authorize('owner'), shoppingListController.createShoppingList); // Создать новый список
-router.get('/get/:listId', authorize('owner'), shoppingListController.getSingleShoppingList); // Получить один список по ID
-router.delete('/delete/:listId', authorize('owner'), shoppingListController.deleteShoppingList); // Удалить список
-router.put('/update/:listId', authorize('owner'), shoppingListController.updateShoppingList); // Обновить список
+
+router.get('/list', authorize('owner'), shoppingListController.getShoppingLists);
+router.post('/create', authorize('owner'), shoppingListController.createShoppingList);
+router.get('/get/:listId', authorize('owner'), shoppingListController.getSingleShoppingList);
+router.delete('/delete/:listId', authorize('owner'), shoppingListController.deleteShoppingList);
+router.put('/update/:listId', authorize('owner'), shoppingListController.updateShoppingList);
 
 module.exports = router;

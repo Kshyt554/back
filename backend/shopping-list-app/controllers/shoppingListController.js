@@ -1,4 +1,4 @@
-const ShoppingList = require('../models/shoppingListModel'); // Импортируем модель
+const ShoppingList = require('../models/shoppingListModel'); 
 
 let shoppingLists = [
   new ShoppingList("7890", "Weekly Groceries", "123456", ["123457", "123458"], [
@@ -11,18 +11,16 @@ let shoppingLists = [
   ])
 ];
 
-// Контроллер для получения всех списков покупок пользователя
 const getShoppingLists = (req, res) => {
   const userShoppingLists = shoppingLists.filter(list => list.ownerId === req.user.userId);
   res.json({ shoppingLists: userShoppingLists });
 };
 
-// Контроллер для создания нового списка покупок
 const createShoppingList = (req, res) => {
   const { name, members, items } = req.body;
 
   const newShoppingList = new ShoppingList(
-    shoppingLists.length + 1, // Генерация нового ID
+    shoppingLists.length + 1, 
     name,
     req.user.userId,
     members,
@@ -33,7 +31,6 @@ const createShoppingList = (req, res) => {
   res.json({ success: true, shoppingList: newShoppingList });
 };
 
-// Контроллер для получения одного списка покупок по ID
 const getSingleShoppingList = (req, res) => {
   const { listId } = req.params;
   const shoppingList = shoppingLists.find(list => list.listId === listId);
@@ -45,7 +42,7 @@ const getSingleShoppingList = (req, res) => {
   res.json({ shoppingList });
 };
 
-// Контроллер для удаления списка покупок по ID
+
 const deleteShoppingList = (req, res) => {
   const { listId } = req.params;
   const index = shoppingLists.findIndex(list => list.listId === listId);
@@ -58,7 +55,7 @@ const deleteShoppingList = (req, res) => {
   res.json({ success: true, message: 'Shopping list deleted' });
 };
 
-// Контроллер для обновления списка покупок
+
 const updateShoppingList = (req, res) => {
   const { listId } = req.params;
   const { name, members, items } = req.body;
